@@ -1,9 +1,7 @@
 services:
   - type: web
-    name: mybc
+    name: my-bingai
     plan: free
     env: go
-    repo: https://github.com/iseauu/bc.git
-    branch: master
-    buildCommand: go build -ldflags="-s -w" -tags netgo -trimpath -o mybc main.go
-    startCommand: ./mybc
+    buildCommand: go build -ldflags="-s -w" -tags netgo -trimpath -o go-proxy-bingai main.go
+    startCommand: ./go-proxy-bingai
